@@ -45,15 +45,9 @@ In this scenario, the ideal visibility timeout for the SQS queue would be at lea
   
 Throughput is calculated as:
 
-\[
-\text{Throughput} = \frac{\text{requests per token} \times \text{number of tokens available}}{\text{time until next token is available}}
-\]
+Throughput = {requests per token} * {number of tokens available}* {time until next token is available}
 
-For example, if each token processes 10 requests in 5 seconds, the throughput would be:
-
-\[
-10 \times 5 \text{ (tokens)} = 50 \text{ requests} / 10s = 5 TPS
-\]
+For example, if each token processes 10 requests in 5 seconds, the throughput would be: 10(requests) * 5 (tokens) / 10s (latency) = 5 TPS
 
 ---
 
